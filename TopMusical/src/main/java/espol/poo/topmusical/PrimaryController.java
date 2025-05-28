@@ -39,7 +39,7 @@ public class PrimaryController {
             lbp.setStyle("-fx-font-weight: bold;-fx-font-size: 40;");
             ImageView iv = new ImageView();
             try {
-                Image img = new Image(new FileInputStream("img/" + c.getImagen()), 50, 50, true, true);
+                Image img = new Image(new FileInputStream("C:\\\\Users\\\\mateo\\\\Desktop\\\\Diseño\\\\Taller01-Ramas\\\\TopMusical\\\\img/" + c.getImagen()), 50, 50, true, true);
                 iv.setImage(img);
 
             } catch (FileNotFoundException ex) {
