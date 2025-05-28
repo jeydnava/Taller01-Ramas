@@ -39,7 +39,7 @@ public class PrimaryController {
             lbp.setStyle("-fx-font-weight: bold;-fx-font-size: 40;");
             ImageView iv = new ImageView();
             try {
-                Image img = new Image(new FileInputStream("img/" + c.getImagen()), 50, 50, true, true);
+                Image img = new Image(new FileInputStream("TopMusical/img/" + c.getImagen()), 50, 50, true, true);
                 iv.setImage(img);
 
             } catch (FileNotFoundException ex) {
@@ -61,7 +61,7 @@ public class PrimaryController {
         lblTitulo.setText(c.getTitulo());
 
         try {
-            Image img = new Image(new FileInputStream("img/" + c.getImagen()), 100, 100, true, true);
+            Image img = new Image(new FileInputStream("TopMusical/img/" + c.getImagen()), 100, 100, true, true);
             ivCancion.setImage(img);
 
         } catch (FileNotFoundException ex) {
@@ -97,7 +97,7 @@ public class PrimaryController {
                 prev = p;
                 ImageView iv = new ImageView();
                 try {
-                    Image img = new Image(new FileInputStream("img/" + ruta));
+                    Image img = new Image(new FileInputStream("TopMusical/img/" + ruta));
                     iv.setImage(img);
 
                 } catch (FileNotFoundException ex) {
