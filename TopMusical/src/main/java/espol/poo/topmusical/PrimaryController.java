@@ -2,9 +2,9 @@ package espol.poo.topmusical;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
+
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -32,6 +32,8 @@ public class PrimaryController {
     public void initialize() {
         listaCanciones = Cancion.leerCanciones();
         Collections.sort(listaCanciones);
+        Collections.reverse(listaCanciones);
+        
         for (Cancion c : listaCanciones ) {
 
             HBox hb = new HBox(10);//hbox para ubicar info de cada cancion
@@ -45,7 +47,7 @@ public class PrimaryController {
             } catch (FileNotFoundException ex) {
                 ex.printStackTrace();
             }
-            Label lbT = new Label(c.getTitulo() + " \n" + c.getCantante());//titulo y cantante
+            Label lbT = new Label(c.getCantante() + " \n"  + c.getTitulo() );//titulo y cantante
             lbT.setStyle("-fx-font-weight: bold;-fx-font-size: 14;");
 
             hb.getChildren().addAll(lbp, iv, lbT);//agregar al hbox
@@ -58,7 +60,7 @@ public class PrimaryController {
 
 
     private void mostrarHistorial(Cancion c) {
-        lblTitulo.setText(c.getTitulo());
+        lblTitulo.setText(c.getCantante() + " - " + c.getTitulo());
 
         try {
             Image img = new Image(new FileInputStream("img/" + c.getImagen()), 100, 100, true, true);
