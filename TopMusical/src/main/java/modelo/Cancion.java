@@ -70,7 +70,7 @@ public class Cancion implements Comparable<Cancion> {
     public static ArrayList<Cancion> leerCanciones() {
         ArrayList<Cancion> lista = new ArrayList<>();
 
-        try ( BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\MSI KATANA\\Taller01-Ramas\\TopMusical\\top10.csv"))) {
+        try ( BufferedReader br = new BufferedReader(new FileReader("top10.csv"))) {
             String linea = "";
             while ((linea = br.readLine()) != null) {
                 String[] datos = linea.split(";");
