@@ -2,5 +2,5 @@
 # Cambios Sección B 
 # Integrante 3
 # Cambio de formato "Artista - Canción"
-./(Top Artista - Cancion.png)
+(./Top Artista - Cancion.png)
 
